@@ -21,7 +21,7 @@ class EstimatorModel(nn.Module):
 
 # Load the pre-trained model weights
 model = EstimatorModel()
-model.load_state_dict(torch.load('height_weight_bmi_model.pth'))
+model.load_state_dict(torch.load('models/height_weight_bmi_model.pth'))
 model.eval()  # Set the model to evaluation mode
 
 # Function to detect faces
@@ -53,11 +53,11 @@ parser.add_argument('--image', help="Path to input image/video. Use 0 for webcam
 args = parser.parse_args()
 
 # Model files and configuration
-faceProto = "opencv_face_detector.pbtxt"
-faceModel = "opencv_face_detector_uint8.pb"
-ageProto = "age_deploy.prototxt"
+faceProto = "models/opencv_face_detector.pbtxt"
+faceModel = "models/opencv_face_detector_uint8.pb"
+ageProto = "models/age_deploy.prototxt"
 ageModel = "age_net.caffemodel"
-genderProto = "gender_deploy.prototxt"
+genderProto = "models/gender_deploy.prototxt"
 genderModel = "gender_net.caffemodel"
 
 MODEL_MEAN_VALUES = (78.4263377603, 87.7689143744, 114.895847746)
