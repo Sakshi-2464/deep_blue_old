@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human & Object Detector</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h1>Human Attribute & Object Dimension Estimator</h1>
+    <div class="container">
+        <label for="fileInput" class="custom-file-upload">Choose an Image</label>
+        <span id="fileNameDisplay">No file chosen</span>
+        <input type="file" id="fileInput" accept="image/*">
+        <button id="analyzeButton" onclick="uploadImage()" style="display: none;">Analyze</button>
+
+        <h2>OR</h2>
+        <button onclick="startCamera()">Use Camera</button>
+        <video id="cameraFeed" autoplay></video>
+        <button id="captureButton" onclick="capturePhoto()">Capture</button>
+
+        <!-- **New Image Display Section** -->
+        <div id="image-preview-container">
+            <h2>Selected Image:</h2>
+            <img id="imagePreview" src="" alt="Selected Image" style="display: none;">
+        </div>
+
+        <div id="result-container">
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
