@@ -4,3 +4,5 @@ gender caffe model : https://github.com/smahesh29/Gender-and-Age-Detection/blob/
 Place these in models directory
 
 yolov3.weights : https://github.com/patrick013/Object-Detection---Yolov3/blob/master/model/yolov3.weights
+
+run : python app.py
