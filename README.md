@@ -5,7 +5,10 @@ Place these in models directory
 
 yolov3.weights : https://github.com/patrick013/Object-Detection---Yolov3/blob/master/model/yolov3.weights
 
-height_weight_bmi.pth : trained on data.csv \n
+height_weight_bmi.pth : trained on data.csv 
+
 h_w_model.pth : trained on bdims.csv
+
 currently we use height_weight_bmi.pth
+
 run : python app.py
